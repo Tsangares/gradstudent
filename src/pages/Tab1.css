@@ -1,0 +1,11 @@
+.absolute-icon,.absolute-icon-right {
+  position: absolute;
+  right: var(--padding-start);
+}
+.absolute-icon-left {
+  position: absolute;
+  left: var(--padding-start);
+}
+.soft-lines{
+    white-space: pre-line;
+}
