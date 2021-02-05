@@ -131,7 +131,7 @@ const Tab1: React.FC = () => {
 			<IonCardContent>
 			    <Skill name="mySQL" level={5} />
 			    <Skill name="MongoDB" level={5} />
-			    <Skill name="Redis" level={3} />
+			    <Skill name="Redis" level={4} />
 			    <Skill name="PostgreSQL" level={3} line={false} />
 			</IonCardContent>
 		    </IonCard>
