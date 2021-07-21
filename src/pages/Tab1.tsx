@@ -58,7 +58,7 @@ const Tab1: React.FC = () => {
 			</IonCardHeader>
 			<IonCardContent>
 			    <IonNote color="secondary">
-				To summarize myself, what I am good at is research and my desire lies in challenging the norm to find viable solutions that can better the state of living for my community and the global sphere of all communities. Currently, a subject that piques my interest is distributed ledgers. My goal is to understand their impact and limitations in offering automation that can enable jobs rather than deteriorate employment. 
+				My motivation lies in finding solutions to better the standard of living of my community and the sphere of all communities. Currently, a subject that piques my interest is distributed ledgers. My goal is to understand their impact and limitations in offering automation that can enable jobs rather than deteriorate employment. 
 			    </IonNote>
 			</IonCardContent>
 		    </IonCard>

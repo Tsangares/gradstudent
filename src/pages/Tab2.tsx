@@ -99,7 +99,7 @@ const Tab2: React.FC = () => {
 				<IonTitle color="secondary" className="ion-text-center">Iota Workshop</IonTitle>
 			    </IonItem>
 			    <IonItem>
-				<IonLabel color="dark" className="ion-padding ion-text-wrap">By targeting the instrument of labour to produce commodities, I verbosely describe in <a href="https://gist.github.com/Tsangares/6a6521ae66a4a4c75f5c55a15242ce13" target="_blank">this document</a> how to create an autonomous workshop containing vending equipment. The purpose is the create a cheaper alternative to equipment rental services, like at Home Depot, to reduce the barier of entry to start a craft production business. The benefit of this project is to create entrepreneurial jobs in either general or niche markets by enabling the working class with affordable tools they need to produce goods for their local communities.</IonLabel>
+				<IonLabel color="dark" className="ion-padding ion-text-wrap">Winner of the <a href="https://i2t.medium.com/integrate-everything-with-iota-hackathon-winners-announcement-d1c86f075b3b">IOT2Tangle Hackithon!</a> By targeting the instrument of labour to produce commodities, I verbosely describe in <a href="https://gist.github.com/Tsangares/6a6521ae66a4a4c75f5c55a15242ce13" target="_blank">this document</a> how to create an autonomous workshop containing vending equipment. The purpose is the create a cheaper alternative to equipment rental services, like at Home Depot, to reduce the barier of entry to start a craft production business. The benefit of this project is to create entrepreneurial jobs in either general or niche markets by enabling the working class with affordable tools they need to produce goods for their local communities.</IonLabel>
 			    </IonItem>
 			</IonCol>
 		    </IonRow>
