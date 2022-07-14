@@ -39,7 +39,7 @@ const Tab1: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>William Carlos Wyatt</IonTitle>
+          <IonTitle>William Carlos Wyatt: Math-Econ PhD Student</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>

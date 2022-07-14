@@ -70,7 +70,7 @@ const Tab2: React.FC = () => {
 		    </IonRow>
 		</IonGrid>
 		<IonItem className="ion-margin-top" lines="none">
-		    <IonTitle className="ion-text-center">Noteable Projects</IonTitle>
+		    <IonTitle className="ion-text-center">Notable Projects</IonTitle>
 		</IonItem>
 		<IonGrid className="ion-margin">
 		    <IonRow>
