@@ -24,6 +24,13 @@ import ExploreContainer from '../components/ExploreContainer';
 import './Tab2.css';
 
 const Tab2: React.FC = () => {
+	setTimeout((win:Window,ev:Event) => {
+		const element = document.querySelector('#' + document.location.toString().split('#')[1]);
+		if (element != null) {
+			element.scrollIntoView({ behavior: 'smooth' });
+		}
+	},500);
+	console.log()
     return (
 	<IonPage>
 	    <IonHeader>
