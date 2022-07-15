@@ -71,16 +71,17 @@ const Tab1: React.FC = () => {
 		      <IonTitle color="dark" className="ion-text-center">Projects Overview</IonTitle>
 		    </IonCardHeader>
 		    <IonCardContent>
-				<a href="/work#halyard"><IonButton fill="outline" >Game: Halyard (2012)</IonButton></a><br />
-				<a href="/work#citywide"><IonButton fill="outline" >Game: CityWide (2013)</IonButton></a><br />
-				<a href="/work#beelieve"><IonButton fill="outline" >Game: Beelieve (2014)</IonButton></a><br />
-				<a href="/work#this-agora"><IonButton fill="outline" >Webapp: This Agora (2015)</IonButton></a><br />
-				<a href="/work#iota-bet"><IonButton fill="outline" >Webapp: IOTA Bet (2017)</IonButton></a><br />
-				<a href="/work#osrs"><IonButton fill="outline" >Runescape Bot Swarm (2017-2019)</IonButton></a><br />
-				<a href="/work#iota-workshop"><IonButton fill="outline" >IOTA Workshop (2020)</IonButton></a><br />
-				<a href="/work#mturk"><IonButton fill="outline" >Author: MTurk Research (2021)</IonButton></a><br />
+				
+			<a href="/work#ctf"><IonButton fill="outline" >Capture The Flag: Webcrawling (2022)</IonButton></a><br />
 				<a href="/work#dlmp"><IonButton fill="outline" >Deep Links Meta Pages (2022)</IonButton></a><br />
-				<a href="/work#ctf"><IonButton fill="outline" >Capture The Flag: Webcrawling (2022)</IonButton></a><br />
+				<a href="/work#mturk"><IonButton fill="outline" >Author: MTurk Research (2021)</IonButton></a><br />
+				<a href="/work#iota-workshop"><IonButton fill="outline" >IOTA Workshop (2020)</IonButton></a><br />
+				<a href="/work#osrs"><IonButton fill="outline" >Runescape Bot Swarm (2017-2019)</IonButton></a><br />
+				<a href="/work#iota-bet"><IonButton fill="outline" >Webapp: IOTA Bet (2017)</IonButton></a><br />
+				<a href="/work#this-agora"><IonButton fill="outline" >Webapp: This Agora (2015)</IonButton></a><br />
+				<a href="/work#beelieve"><IonButton fill="outline" >Game: Beelieve (2014)</IonButton></a><br />
+				<a href="/work#citywide"><IonButton fill="outline" >Game: CityWide (2013)</IonButton></a><br />
+				<a href="/work#halyard"><IonButton fill="outline" >Game: Halyard (2012)</IonButton></a><br />
 		    </IonCardContent>
 		  </IonCard>
 		</IonCol>                
