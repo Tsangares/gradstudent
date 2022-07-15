@@ -173,9 +173,9 @@ const Tab2: React.FC = () => {
 				<IonNote className="ion-word-wrap">I am not allowed to release the software to this project because it breaches the terms and agreement of Jagex. I never hurt the game or interfered with other players; I just wanted to play Runescape through a bot network. This software given to the wrong people can critically damage the in-game economy and game experience for others.</IonNote>
 				<br />
 				<IonGrid ><IonRow class="ion-justify-content-center">
-				<IonCol size={'2'} />
-				<IonCol size={'8'} ><img src="/img/rsbot.png" /></IonCol>
-				<IonCol size={'2'} />
+				<IonCol size-lg={'2'} size-xs={'0'}  />
+				<IonCol size-lg={'8'} size-xs={'12'}  ><img src="/img/rsbot.png" /></IonCol>
+				<IonCol size-lg={'2'} size-xs={'0'}  />
 				</IonRow></IonGrid>
 			  </IonItemGroup>
 		    </IonCardContent>
@@ -194,9 +194,9 @@ const Tab2: React.FC = () => {
 				<IonNote className="ion-word-wrap">This project used the IOTA Ledger as an immutable public database where encrypted sensor data of the rental box is uploaded. This allows the rental box to accept and vend equipment completley autonomuosly. This is supposed to showcase a type of autonomous business that could not exist prior to smart contracts and distributed ledgers.</IonNote>
 				<br />
 				<IonGrid ><IonRow class="ion-justify-content-center">
-				<IonCol size={'2'} />
-				<IonCol size={'8'} ><img src="/img/workshop.jpg" /></IonCol>
-				<IonCol size={'2'} />
+				<IonCol size-lg={'2'} size-xs={'0'}  />
+				<IonCol size-lg={'8'} size-xs={'12'}  ><img src="/img/workshop.jpg" /></IonCol>
+				<IonCol size-lg={'2'} size-xs={'0'} />
 				</IonRow></IonGrid>
 				<IonItemGroup class="ion-text-center">
 				<a target="_blank" href="https://youtu.be/PolIkJH3thQ"><IonButton class="ion-text-center">View Video Introduction</IonButton></a>
@@ -221,9 +221,9 @@ const Tab2: React.FC = () => {
 				<IonNote className="ion-word-wrap">This project implements both an interface for MTurks, students, a way to display and filter data. The repository can be recycled for other research projects.</IonNote>
 				<br />
 				<IonGrid className="ion-text-center" ><IonRow class="ion-justify-content-center">
-				<IonCol size={'3'} />
-				<IonCol size={'4'} ><img src="/img/author.png" /></IonCol>
-				<IonCol size={'3'} />
+				<IonCol size-lg={'4'} size-xs={'0'} />
+				<IonCol size-lg={'4'} size-xs={'12'} ><img src="/img/author.png" /></IonCol>
+				<IonCol size-lg={'4'} size-xs={'0'} />
 				</IonRow></IonGrid>
 				<IonItemGroup class="ion-text-center">
 				<a target="_blank" href="https://author.gradstudent.me"><IonButton class="ion-text-center">View Website</IonButton></a>
@@ -248,9 +248,9 @@ that end-users can interact, customize and curate. </IonNote>
 				<IonNote className="ion-word-wrap">This project used the IOTA Ledger to create identities of the produces used as a digital passport for supply chain audits.</IonNote>
 				<br />
 				<IonGrid className="ion-text-center" ><IonRow class="ion-justify-content-center">
-				<IonCol size={'4'} />
-				<IonCol size={'3'} ><img src="/img/dlmp.png" /></IonCol>
-				<IonCol size={'4'} />
+				<IonCol size-lg={'4'} size-xs={'2'}  />
+				<IonCol size-lg={'4'} size-xs={'8'}  ><img src="/img/dlmp.png" /></IonCol>
+				<IonCol size-lg={'4'} size-xs={'2'}  />
 				</IonRow></IonGrid>
 				<IonItemGroup class="ion-text-center">
 				<a target="_blank" href="/img/Deep_Links_Meta_Pages-Business_Proposal.pdf"><IonButton class="ion-text-center">View Business Proposal</IonButton></a>
@@ -274,9 +274,9 @@ that end-users can interact, customize and curate. </IonNote>
 				<IonNote className="ion-word-wrap">This project used the WebGL library Matter.js to create the graphics involved in the game. This was for a summer course in webcrawling.</IonNote>
 				<br />
 				<IonGrid className="ion-text-center" ><IonRow>
-				<IonCol size={'3'} />
-				<IonCol size={'6'} ><img src="/img/ctf.png" /></IonCol>
-				<IonCol size={'3'} />
+				<IonCol size-lg={'4'} size-xs={'0'}  />
+				<IonCol size-lg={'4'} size-xs={'12'} ><img src="/img/ctf.png" /></IonCol>
+				<IonCol size-lg={'4'} size-xs={'0'} />
 				</IonRow></IonGrid>
 				<IonItemGroup class="ion-text-center">
 				<a target="_blank" href="https://ctf.gradstudent.me"><IonButton class="ion-text-center">View Website</IonButton></a>
