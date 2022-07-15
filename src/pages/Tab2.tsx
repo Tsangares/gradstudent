@@ -45,6 +45,13 @@ const Tab2: React.FC = () => {
 		    </IonToolbar>
 		</IonHeader>
 		<IonGrid>
+			<IonRow>
+				<IonCol size-lg={'4'} size-xs={'2'} />
+				<IonCol size-lg={'4'} size-xs={'8'}>
+					<img src="/img/selfie.jpg" />
+				</IonCol>
+				<IonCol size-lg={'4'} size-xs={'2'} />
+			</IonRow>
 		    <IonRow>
 			<IonCol size-lg={'2'} size-xs={'0'} />
 			<IonCol size-lg={'8'} size-xs={'12'}>
