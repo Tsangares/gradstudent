@@ -72,7 +72,7 @@ const Tab1: React.FC = () => {
 		    </IonCardHeader>
 		    <IonCardContent>
 				
-			<a href="/work#ctf"><IonButton fill="outline" >Capture The Flag: Webcrawling (2022)</IonButton></a><br />
+			<a href="/work#ctf"><IonButton fill="outline" >Game: Webcrawling CTF (2022)</IonButton></a><br />
 				<a href="/work#dlmp"><IonButton fill="outline" >Deep Links Meta Pages (2022)</IonButton></a><br />
 				<a href="/work#mturk"><IonButton fill="outline" >Author: MTurk Research (2021)</IonButton></a><br />
 				<a href="/work#iota-workshop"><IonButton fill="outline" >IOTA Workshop (2020)</IonButton></a><br />
