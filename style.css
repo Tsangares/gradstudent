@@ -938,6 +938,11 @@ a.pub-title:hover { color: var(--blue); border-color: var(--blue); }
   }
   .stat-card { margin-bottom: 0.5rem; }
 
+  /* Center the skill columns row */
+  #stats .columns.is-multiline {
+    justify-content: center;
+  }
+
   /* Radar chart labels smaller on mobile */
   .radar-chart-label { font-size: 9px; }
   .radar-chart-sub { font-size: 7px; }
