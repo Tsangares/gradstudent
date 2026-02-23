@@ -936,14 +936,16 @@ a.pub-title:hover { color: var(--blue); border-color: var(--blue); }
   .counter-num { font-size: 1.2rem; }
   .counter-label { font-size: 0.55rem; }
 
-  /* Skill cards - 2 column centered */
+  /* Skill cards - 2 column, stretched, centered */
   #stats .columns.is-multiline .column.is-one-fifth-desktop {
-    flex: none;
-    width: 50%;
+    flex: none !important;
+    width: 50% !important;
+    padding: 0.4rem !important;
   }
-  .stat-card { margin-bottom: 0.5rem; }
-
-  /* Center the skill columns row */
+  .stat-card {
+    margin-bottom: 0.5rem;
+    width: 100%;
+  }
   #stats .columns.is-multiline {
     justify-content: center;
   }
