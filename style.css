@@ -116,10 +116,6 @@ body {
   font-family: 'Space Mono', monospace;
   font-size: 0.72rem;
   color: var(--green);
-  background: var(--inset);
-  border: 1px solid var(--border);
-  padding: 0.15rem 0.55rem;
-  border-radius: 3px;
   white-space: nowrap;
 }
 
