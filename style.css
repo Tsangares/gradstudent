@@ -277,16 +277,16 @@ body {
 }
 
 .snes-btn {
-  font-family: 'Space Mono', monospace;
-  font-size: 0.5rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #d4d0c8;
+  color: #e0dcd4;
   /* Dark charcoal rubber button */
   background: linear-gradient(180deg, #5a5856 0%, #4a4846 40%, #3e3c3a 100%);
   border: none;
-  padding: 0.28rem 1.2rem;
+  padding: 0.35rem 1.3rem;
   border-radius: 14px;
   cursor: pointer;
   position: relative;
@@ -557,11 +557,7 @@ body {
   margin-top: 0.4rem;
 }
 
-/* ---- Hex meters (research interests) ---- */
-.radar-section {
-  margin-bottom: 2rem;
-}
-
+/* ---- Radar chart (research interests) ---- */
 .stat-category {
   font-family: 'Space Mono', monospace;
   font-size: 0.78rem;
@@ -573,40 +569,39 @@ body {
   border-bottom: 2px solid var(--border);
 }
 
-.radar-grid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 1.2rem;
+.radar-chart-wrap {
+  max-width: 420px;
+  margin: 0 auto 2rem;
 }
 
-.radar-item {
-  text-align: center;
+.radar-chart {
+  width: 100%;
+  height: auto;
 }
 
-.radar-hex {
-  width: 64px;
-  height: 64px;
-  margin: 0 auto 0.5rem;
+.radar-fill {
+  fill: url(#radarGrad);
 }
 
-.hex-meter { width: 100%; height: 100%; }
-.hex-fill {
-  transform-origin: center;
-  transform: scale(var(--level));
+.radar-stroke {
+  fill: none;
+  stroke: var(--blue);
+  stroke-width: 2;
+  stroke-linejoin: round;
+  opacity: 0.7;
 }
 
-.radar-label {
+.radar-chart-label {
   font-family: 'Space Mono', monospace;
-  font-size: 0.68rem;
+  font-size: 11px;
   font-weight: 700;
-  color: var(--ink);
-  display: block;
+  fill: var(--ink);
 }
 
-.radar-sub {
-  font-size: 0.6rem;
-  color: var(--ink-faint);
-  display: block;
+.radar-chart-sub {
+  font-family: 'Inter', sans-serif;
+  font-size: 9px;
+  fill: var(--ink-faint);
 }
 
 /* ---- Publications ---- */
@@ -746,12 +741,14 @@ a.pub-title:hover { color: var(--blue); border-color: var(--blue); }
 }
 
 @media (max-width: 768px) {
-  .hero-section { padding-top: 5rem; }
+  .hero-section { padding: 5rem 1rem 2rem; }
   .hero-title { font-size: 1.8rem; word-wrap: break-word; }
   .hero-subtitle { font-size: 1rem; }
-  .hero-bio { font-size: 0.88rem; }
+  .hero-bio { font-size: 0.88rem; max-width: 100%; padding: 0 0.25rem; }
   .hero-section .column.is-4 { text-align: center; }
-  .portrait-frame { max-width: 220px; margin: 0 auto 1.5rem; }
+  .hero-section .column.is-7 { text-align: center; padding: 0 0.75rem; }
+  /* Stretch portrait on mobile */
+  .portrait-frame { max-width: 100%; margin: 0 auto 1.5rem; }
   .degree-trail { justify-content: center; }
 
   .section-heading { font-size: 1.5rem; }
@@ -761,10 +758,25 @@ a.pub-title:hover { color: var(--blue); border-color: var(--blue); }
 
   .counter-num { font-size: 1.2rem; }
   .counter-label { font-size: 0.55rem; }
+
+  /* Skill cards - 2 column centered */
+  #stats .columns.is-multiline .column.is-one-fifth-desktop {
+    flex: none;
+    width: 50%;
+  }
+  .stat-card { margin-bottom: 0.5rem; }
+
+  /* Radar chart labels smaller on mobile */
+  .radar-chart-label { font-size: 9px; }
+  .radar-chart-sub { font-size: 7px; }
 }
 
 @media (max-width: 480px) {
+  .hero-section { padding: 4.5rem 0.75rem 2rem; }
   .hero-title { font-size: 1.5rem; }
+  .hero-bio { font-size: 0.82rem; }
   .btn-group { justify-content: center; }
-  .hero-text { text-align: center; }
+  .hero-section .column.is-7 { text-align: center; padding: 0 0.5rem; }
+  .degree-trail { gap: 0.4rem; }
+  .degree { font-size: 0.62rem; padding: 0.1rem 0.4rem; }
 }

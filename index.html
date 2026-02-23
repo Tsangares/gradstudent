@@ -247,51 +247,37 @@
       <h2 class="section-heading">Character Sheet</h2>
     </div>
 
-    <!-- Research Interests Hex Grid -->
+    <!-- Research Interests Radar Chart -->
     <h3 class="stat-category">Research Interests</h3>
-    <div class="columns is-multiline is-mobile">
-      <div class="column is-2-desktop is-4-mobile has-text-centered">
-        <div class="radar-hex">
-          <svg viewBox="0 0 100 100" class="hex-meter"><polygon points="50,5 95,27.5 95,72.5 50,95 5,72.5 5,27.5" fill="none" stroke="#b8b4aa" stroke-width="1.5"/><polygon points="50,5 95,27.5 95,72.5 50,95 5,72.5 5,27.5" fill="#4a6fa5" opacity="0.3" class="hex-fill" style="--level:0.92"/></svg>
-        </div>
-        <span class="radar-label">LLM Behavior</span>
-        <span class="radar-sub">4 papers</span>
-      </div>
-      <div class="column is-2-desktop is-4-mobile has-text-centered">
-        <div class="radar-hex">
-          <svg viewBox="0 0 100 100" class="hex-meter"><polygon points="50,5 95,27.5 95,72.5 50,95 5,72.5 5,27.5" fill="none" stroke="#b8b4aa" stroke-width="1.5"/><polygon points="50,5 95,27.5 95,72.5 50,95 5,72.5 5,27.5" fill="#4a6fa5" opacity="0.3" class="hex-fill" style="--level:0.88"/></svg>
-        </div>
-        <span class="radar-label">Causal Inference</span>
-        <span class="radar-sub">RDD, DiD, SC</span>
-      </div>
-      <div class="column is-2-desktop is-4-mobile has-text-centered">
-        <div class="radar-hex">
-          <svg viewBox="0 0 100 100" class="hex-meter"><polygon points="50,5 95,27.5 95,72.5 50,95 5,72.5 5,27.5" fill="none" stroke="#b8b4aa" stroke-width="1.5"/><polygon points="50,5 95,27.5 95,72.5 50,95 5,72.5 5,27.5" fill="#4a6fa5" opacity="0.3" class="hex-fill" style="--level:0.80"/></svg>
-        </div>
-        <span class="radar-label">Game Theory</span>
-        <span class="radar-sub">Behavioral econ</span>
-      </div>
-      <div class="column is-2-desktop is-4-mobile has-text-centered">
-        <div class="radar-hex">
-          <svg viewBox="0 0 100 100" class="hex-meter"><polygon points="50,5 95,27.5 95,72.5 50,95 5,72.5 5,27.5" fill="none" stroke="#b8b4aa" stroke-width="1.5"/><polygon points="50,5 95,27.5 95,72.5 50,95 5,72.5 5,27.5" fill="#4a6fa5" opacity="0.3" class="hex-fill" style="--level:0.85"/></svg>
-        </div>
-        <span class="radar-label">AI Alignment</span>
-        <span class="radar-sub">Safety & risk</span>
-      </div>
-      <div class="column is-2-desktop is-4-mobile has-text-centered">
-        <div class="radar-hex">
-          <svg viewBox="0 0 100 100" class="hex-meter"><polygon points="50,5 95,27.5 95,72.5 50,95 5,72.5 5,27.5" fill="none" stroke="#b8b4aa" stroke-width="1.5"/><polygon points="50,5 95,27.5 95,72.5 50,95 5,72.5 5,27.5" fill="#4a6fa5" opacity="0.3" class="hex-fill" style="--level:0.72"/></svg>
-        </div>
-        <span class="radar-label">Criminal Justice</span>
-        <span class="radar-sub">Policy eval</span>
-      </div>
-      <div class="column is-2-desktop is-4-mobile has-text-centered">
-        <div class="radar-hex">
-          <svg viewBox="0 0 100 100" class="hex-meter"><polygon points="50,5 95,27.5 95,72.5 50,95 5,72.5 5,27.5" fill="none" stroke="#b8b4aa" stroke-width="1.5"/><polygon points="50,5 95,27.5 95,72.5 50,95 5,72.5 5,27.5" fill="#4a6fa5" opacity="0.3" class="hex-fill" style="--level:0.65"/></svg>
-        </div>
-        <span class="radar-label">Particle Physics</span>
-        <span class="radar-sub">6 papers, SLAC</span>
-      </div>
+    <div class="radar-chart-wrap">
+      <svg id="radarChart" viewBox="0 0 400 400" class="radar-chart">
+        <defs>
+          <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur"/>
+            <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.6 0" result="glow"/>
+            <feMerge>
+              <feMergeNode in="glow"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+          <radialGradient id="radarGrad" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#6b8fc0" stop-opacity="0.7"/>
+            <stop offset="60%" stop-color="#4a6fa5" stop-opacity="0.45"/>
+            <stop offset="100%" stop-color="#4a6fa5" stop-opacity="0.2"/>
+          </radialGradient>
+        </defs>
+        <!-- Grid rings (20%, 40%, 60%, 80%, 100%) -->
+        <g class="radar-grid" id="radarGrid"></g>
+        <!-- Axis lines -->
+        <g class="radar-axes" id="radarAxes"></g>
+        <!-- Data polygon with blur -->
+        <polygon id="radarFill" class="radar-fill" filter="url(#glow)"/>
+        <polygon id="radarStroke" class="radar-stroke"/>
+        <!-- Data points -->
+        <g id="radarDots"></g>
+        <!-- Labels -->
+        <g id="radarLabels"></g>
+      </svg>
     </div>
 
     <!-- Skill Stat Cards -->
@@ -480,6 +466,91 @@ document.addEventListener('DOMContentLoaded', () => {
       icon.textContent = d.open ? '\u25BE' : '\u25B6';
     });
   });
+  // Radar chart
+  (function() {
+    const data = [
+      { label: 'LLM Behavior', sub: '4 papers', level: 0.92 },
+      { label: 'Causal Inference', sub: 'RDD, DiD, SC', level: 0.88 },
+      { label: 'Game Theory', sub: 'Behavioral econ', level: 0.80 },
+      { label: 'AI Alignment', sub: 'Safety & risk', level: 0.85 },
+      { label: 'Criminal Justice', sub: 'Policy eval', level: 0.72 },
+      { label: 'Particle Physics', sub: '6 papers, SLAC', level: 0.65 }
+    ];
+    const cx = 200, cy = 200, R = 140;
+    const n = data.length;
+    const ns = 'http://www.w3.org/2000/svg';
+
+    function vertex(i, r) {
+      const angle = (Math.PI * 2 * i / n) - Math.PI / 2;
+      return [cx + r * Math.cos(angle), cy + r * Math.sin(angle)];
+    }
+
+    // Grid rings
+    const gridG = document.getElementById('radarGrid');
+    [0.2, 0.4, 0.6, 0.8, 1.0].forEach(pct => {
+      const pts = [];
+      for (let i = 0; i < n; i++) pts.push(vertex(i, R * pct).join(','));
+      const poly = document.createElementNS(ns, 'polygon');
+      poly.setAttribute('points', pts.join(' '));
+      poly.setAttribute('fill', 'none');
+      poly.setAttribute('stroke', pct === 1.0 ? '#9c9890' : '#c8c4ba');
+      poly.setAttribute('stroke-width', pct === 1.0 ? '1.5' : '0.8');
+      gridG.appendChild(poly);
+    });
+
+    // Axes
+    const axesG = document.getElementById('radarAxes');
+    for (let i = 0; i < n; i++) {
+      const [x, y] = vertex(i, R);
+      const line = document.createElementNS(ns, 'line');
+      line.setAttribute('x1', cx); line.setAttribute('y1', cy);
+      line.setAttribute('x2', x); line.setAttribute('y2', y);
+      line.setAttribute('stroke', '#c8c4ba');
+      line.setAttribute('stroke-width', '0.8');
+      axesG.appendChild(line);
+    }
+
+    // Data polygon
+    const dataPts = data.map((d, i) => vertex(i, R * d.level).join(',')).join(' ');
+    document.getElementById('radarFill').setAttribute('points', dataPts);
+    document.getElementById('radarFill').setAttribute('fill', 'url(#radarGrad)');
+    document.getElementById('radarStroke').setAttribute('points', dataPts);
+
+    // Dots
+    const dotsG = document.getElementById('radarDots');
+    data.forEach((d, i) => {
+      const [x, y] = vertex(i, R * d.level);
+      const circle = document.createElementNS(ns, 'circle');
+      circle.setAttribute('cx', x); circle.setAttribute('cy', y);
+      circle.setAttribute('r', '4');
+      circle.setAttribute('fill', '#4a6fa5');
+      circle.setAttribute('stroke', '#fff');
+      circle.setAttribute('stroke-width', '2');
+      dotsG.appendChild(circle);
+    });
+
+    // Labels
+    const labelsG = document.getElementById('radarLabels');
+    data.forEach((d, i) => {
+      const [x, y] = vertex(i, R + 32);
+      const text = document.createElementNS(ns, 'text');
+      text.setAttribute('x', x); text.setAttribute('y', y);
+      text.setAttribute('text-anchor', 'middle');
+      text.setAttribute('dominant-baseline', 'middle');
+      text.setAttribute('class', 'radar-chart-label');
+      text.textContent = d.label;
+      labelsG.appendChild(text);
+      // Sub label
+      const sub = document.createElementNS(ns, 'text');
+      sub.setAttribute('x', x); sub.setAttribute('y', y + 14);
+      sub.setAttribute('text-anchor', 'middle');
+      sub.setAttribute('dominant-baseline', 'middle');
+      sub.setAttribute('class', 'radar-chart-sub');
+      sub.textContent = d.sub;
+      labelsG.appendChild(sub);
+    });
+  })();
+
   // SNES controller buttons - smooth scroll to target section
   document.querySelectorAll('.snes-btn').forEach(btn => {
     btn.addEventListener('click', () => {
