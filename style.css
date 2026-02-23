@@ -416,11 +416,23 @@ body {
   background: #f5f0e0;
   border: 2px solid #c8b888;
   border-radius: 2px;
-  padding: 0.6rem 1.2rem 0.5rem;
+  padding: 0.6rem 1.2rem 0.5rem 2.2rem;
   margin-bottom: 0.8rem;
   position: relative;
   box-shadow: 0 2px 0 var(--border), 1px 1px 4px rgba(0,0,0,0.08);
   background-image: linear-gradient(180deg, #f5f0e0 0%, #ece6d0 100%);
+}
+
+/* Red margin line like lined paper */
+.catalog-card::before {
+  content: '';
+  position: absolute;
+  left: 1.6rem;
+  top: 0;
+  bottom: 0;
+  width: 1.5px;
+  background: #c87068;
+  opacity: 0.5;
 }
 
 .catalog-holes {
@@ -441,7 +453,7 @@ body {
 }
 
 .catalog-body {
-  padding-left: 1rem;
+  padding-left: 0.6rem;
   display: flex;
   align-items: baseline;
   gap: 0.6rem;
@@ -481,7 +493,7 @@ body {
   color: #a09878;
   text-align: right;
   margin-top: 0.15rem;
-  padding-left: 1rem;
+  padding-left: 0.6rem;
 }
 
 .section-heading {
