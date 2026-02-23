@@ -421,76 +421,160 @@ body {
 /* ---- Catalog card (Publications) ---- */
 .catalog-card {
   display: inline-block;
-  background: #f5f0e0;
-  border: 2px solid #c8b888;
-  border-radius: 2px;
-  padding: 0.6rem 1.2rem 0.5rem;
-  margin-bottom: 0.8rem;
-  position: relative;
-  box-shadow: 0 2px 0 var(--border), 1px 1px 4px rgba(0,0,0,0.08);
-  /* Slight age / paper feel */
-  background-image: linear-gradient(180deg, #f5f0e0 0%, #ece6d0 100%);
-}
-
-.catalog-holes {
-  display: flex;
-  gap: 3px;
-  position: absolute;
-  left: 6px;
-  top: 50%;
-  transform: translateY(-50%);
-  flex-direction: column;
-}
-.catalog-holes span {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: var(--bg);
+  width: 340px;
+  background: #f8f4e8;
+  background-image:
+    linear-gradient(180deg, #faf6ec 0%, #f0ead8 50%, #e8e0cc 100%);
   border: 1px solid #c8b888;
+  border-radius: 1px;
+  padding: 1rem 1.2rem 0.8rem;
+  margin-bottom: 1rem;
+  position: relative;
+  box-shadow:
+    0 1px 0 #d8d0b8,
+    0 2px 0 #c8c0a8,
+    0 3px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
 }
 
-.catalog-body {
-  padding-left: 1rem;
+/* Horizontal ruled lines across the card */
+.catalog-ruled-lines {
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    180deg,
+    transparent,
+    transparent 17px,
+    #d4cbb0 17px,
+    #d4cbb0 18px
+  );
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Red margin line */
+.catalog-card::before {
+  content: '';
+  position: absolute;
+  left: 28px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: #c8706880;
+}
+
+/* Dewey decimal + call number */
+.catalog-top {
   display: flex;
-  align-items: baseline;
-  gap: 0.6rem;
+  justify-content: space-between;
+  margin-bottom: 0.6rem;
+  position: relative;
+}
+
+.catalog-dewey {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #4a4030;
+  letter-spacing: 0.05em;
+}
+
+.catalog-class {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.68rem;
+  color: #8a7e68;
+}
+
+/* Main entry - typewriter style */
+.catalog-entry {
+  margin-bottom: 0.5rem;
+  padding-left: 0.2rem;
+  position: relative;
+}
+
+.catalog-author {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #3a3020;
+  margin-bottom: 0.15rem;
+}
+
+.catalog-title-line {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.65rem;
+  color: #5a5040;
+  line-height: 1.5;
+}
+
+.catalog-imprint {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.6rem;
+  color: #8a7e68;
+  margin-top: 0.25rem;
+}
+
+/* Subject headings */
+.catalog-subjects {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.6rem;
+  position: relative;
+}
+
+.catalog-subjects span {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.52rem;
+  color: #7a6e58;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Bottom row */
+.catalog-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
 }
 
 .catalog-stamp {
   font-family: 'Space Mono', monospace;
-  font-size: 0.55rem;
+  font-size: 0.7rem;
   font-weight: 700;
-  letter-spacing: 0.2em;
-  color: var(--red);
+  letter-spacing: 0.25em;
+  color: #b84048;
   text-transform: uppercase;
-  border: 2px solid var(--red);
-  padding: 0.1rem 0.4rem;
-  border-radius: 2px;
-  transform: rotate(-3deg);
+  border: 2.5px solid #b84048;
+  padding: 0.12rem 0.6rem;
+  border-radius: 3px;
+  transform: rotate(-4deg);
   display: inline-block;
+  opacity: 0.7;
+  /* Ink bleed effect */
+  text-shadow: 0 0 1px #b8404880;
+  box-shadow: 0 0 0 1px #b8404815;
 }
 
-.catalog-num {
+.catalog-count {
   font-family: 'Space Mono', monospace;
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #3a3020;
+  font-size: 0.6rem;
+  color: #8a7e68;
 }
 
-.catalog-line {
-  font-family: 'Space Mono', monospace;
-  font-size: 0.55rem;
-  color: #8a8060;
-  letter-spacing: 0.08em;
-}
-
-.catalog-date {
-  font-family: 'Space Mono', monospace;
-  font-size: 0.5rem;
-  color: #a09878;
-  text-align: right;
-  margin-top: 0.15rem;
-  padding-left: 1rem;
+/* Bottom notch (like a real catalog card) */
+.catalog-notch {
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 10px;
+  background: var(--bg-alt);
+  border-radius: 10px 10px 0 0;
+  border: 1px solid #c8b888;
+  border-bottom: none;
 }
 
 .section-heading {
