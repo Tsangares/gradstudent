@@ -936,18 +936,19 @@ a.pub-title:hover { color: var(--blue); border-color: var(--blue); }
   .counter-num { font-size: 1.2rem; }
   .counter-label { font-size: 0.55rem; }
 
-  /* Skill cards - 2 column, stretched, centered */
-  #stats .columns.is-multiline .column.is-one-fifth-desktop {
-    flex: none !important;
-    width: 50% !important;
-    padding: 0.4rem !important;
+  /* Skill cards - force 2-col grid on mobile */
+  #stats .columns.is-multiline.is-centered {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+  #stats .columns.is-multiline.is-centered > .column {
+    width: 100% !important;
+    padding: 0 !important;
   }
   .stat-card {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0;
     width: 100%;
-  }
-  #stats .columns.is-multiline {
-    justify-content: center;
   }
 
   /* Radar chart labels smaller on mobile */
