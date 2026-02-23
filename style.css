@@ -104,24 +104,32 @@ body {
   overflow: hidden;
 }
 
-/* Degree trail */
+/* Degree trail - terminal style */
 .degree-trail {
-  display: flex;
-  gap: 0.6rem;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.72rem;
+  background: #1e1e1e;
+  color: #c8c8c8;
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--radius);
+  border: 1px solid #333;
+  box-shadow: inset 0 1px 4px rgba(0,0,0,0.4);
+  display: inline-flex;
+  gap: 0;
   flex-wrap: wrap;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.8rem;
+  line-height: 1.8;
 }
 
 .degree {
-  font-family: 'Space Mono', monospace;
-  font-size: 0.72rem;
-  color: var(--green);
-  background: var(--inset);
-  border: 1px solid var(--border);
-  padding: 0.15rem 0.55rem;
-  border-radius: 3px;
   white-space: nowrap;
+  color: #6bbd6b;
+  margin-right: 0.5rem;
 }
+
+.degree .deg-arrow { color: #888; }
+.degree .deg-name { color: #e8e8e8; }
+.degree .deg-field { color: #5b9fd4; }
 
 .portrait-frame {
   background: var(--surface);
