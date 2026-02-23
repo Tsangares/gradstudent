@@ -3,52 +3,51 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>William Wyatt — Economist & AI Researcher</title>
+  <title>William Wyatt - Economist & AI Researcher</title>
   <meta name="description" content="PhD Economist studying LLM behavioral alignment through game theory and causal inference.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Blur orbs (background decoration) -->
-<div class="blur-orb orb-1"></div>
-<div class="blur-orb orb-2"></div>
-<div class="blur-orb orb-3"></div>
-
-<nav class="nav">
-  <div class="nav-inner">
-    <a href="/" class="nav-brand">W<span class="dim">.</span>WYATT</a>
-    <button class="nav-toggle" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-    <div class="nav-links">
-      <a href="#research">Research</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#publications">Pubs</a>
-      <a href="#contact">Contact</a>
+<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">W<span class="dim">.</span>WYATT</a>
+      <a role="button" class="navbar-burger" data-target="mainNav" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div id="mainNav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#research">Research</a>
+        <a class="navbar-item" href="#projects">Projects</a>
+        <a class="navbar-item" href="#stats">Stats</a>
+        <a class="navbar-item" href="#publications">Pubs</a>
+        <a class="navbar-item" href="#contact">Contact</a>
+      </div>
     </div>
   </div>
 </nav>
 
 <!-- Hero -->
-<header class="hero">
+<section class="hero-section section">
   <div class="container">
-    <div class="hero-grid">
-      <div class="hero-portrait">
-        <div class="cartridge-frame">
-          <div class="cartridge-label">PLAYER 1</div>
+    <div class="columns is-vcentered">
+      <div class="column is-4">
+        <div class="portrait-frame">
           <img src="img/portrait.jpg" alt="William Wyatt">
         </div>
       </div>
-      <div class="hero-text">
+      <div class="column is-7 is-offset-1">
         <p class="hero-tag">&gt; PhD Economics · Claremont Graduate University · 2026</p>
-        <h1>William Wyatt</h1>
+        <h1 class="hero-title">William Wyatt</h1>
         <p class="hero-subtitle">Studying how LLMs reason, decide, and take risks</p>
-        <p class="hero-bio">I run large-scale behavioral experiments on language models — using game theory, causal inference, and 15,000+ observations — to understand how prompts shape AI decision-making. My work sits at the intersection of economics, alignment, and empirical AI research.</p>
-        <div class="hero-buttons">
+        <p class="hero-bio">I run large-scale behavioral experiments on language models using game theory, causal inference, and 15,000+ observations to figure out how prompts shape the way AI makes decisions. My work connects economics, alignment, and empirical AI research.</p>
+        <div class="btn-group">
           <a href="https://github.com/Tsangares" class="btn btn-primary">GitHub</a>
           <a href="https://linkedin.com/in/wyatt-william" class="btn btn-outline">LinkedIn</a>
           <a href="mailto:William.Wyatt@cgu.edu" class="btn btn-outline">Email</a>
@@ -56,52 +55,79 @@
       </div>
     </div>
   </div>
-</header>
+</section>
+
+<!-- Stats counter bar -->
+<section class="counter-bar">
+  <div class="container">
+    <div class="columns is-mobile is-multiline is-centered">
+      <div class="column is-2-desktop is-4-mobile has-text-centered">
+        <span class="counter-num">10</span>
+        <span class="counter-label">Publications</span>
+      </div>
+      <div class="column is-2-desktop is-4-mobile has-text-centered">
+        <span class="counter-num">15K+</span>
+        <span class="counter-label">Observations</span>
+      </div>
+      <div class="column is-2-desktop is-4-mobile has-text-centered">
+        <span class="counter-num">283</span>
+        <span class="counter-label">Prompt Tests</span>
+      </div>
+      <div class="column is-2-desktop is-4-mobile has-text-centered">
+        <span class="counter-num">150M</span>
+        <span class="counter-label">Records</span>
+      </div>
+      <div class="column is-2-desktop is-4-mobile has-text-centered">
+        <span class="counter-num">14</span>
+        <span class="counter-label">Yr Python</span>
+      </div>
+      <div class="column is-2-desktop is-4-mobile has-text-centered">
+        <span class="counter-num">136</span>
+        <span class="counter-label">Repos</span>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- Research -->
 <section id="research" class="section">
   <div class="container">
     <div class="section-header">
       <span class="section-tag">SELECT</span>
-      <h2>Research</h2>
+      <h2 class="section-heading">Research</h2>
       <p class="section-sub">LLM behavioral alignment through the lens of economics</p>
     </div>
-    <div class="card-grid">
-      <div class="card card-research">
-        <div class="card-badge badge-active">Job Market Paper</div>
-        <h3>Participation or Observation: How Prompts Control LLM Reasoning</h3>
-        <p>Empirical study across 283 prompt permutations identifying which phrases cause LLMs to embody scenarios versus observe them — and how this shifts strategic behavior.</p>
-        <div class="card-footer">
-          <span class="card-year">2026</span>
-          <a href="https://github.com/Tsangares/llm_embodiment" class="btn btn-sm">Code →</a>
+    <div class="columns is-multiline">
+      <div class="column is-6">
+        <div class="card card-research">
+          <div class="card-badge badge-active">Job Market Paper</div>
+          <h3>Participation or Observation: How Prompts Control LLM Reasoning</h3>
+          <p>Empirical study across 283 prompt permutations identifying which phrases cause LLMs to embody scenarios versus observe them, and how this shifts strategic behavior.</p>
+          <div class="card-foot"><span class="card-year">2026</span><a href="https://github.com/Tsangares/llm_embodiment" class="btn btn-sm">Code &rarr;</a></div>
         </div>
       </div>
-
-      <div class="card card-research">
-        <div class="card-badge badge-review">Under Review</div>
-        <h3>The Role of Responsibility in AI's Strategic Risk-Taking</h3>
-        <p>15,000+ observations demonstrating LLMs are 73.2% more likely than humans to take risks when decisions impact others.</p>
-        <div class="card-footer">
-          <span class="card-year">2026</span>
-          <a href="https://github.com/Tsangares/llm_responsibility" class="btn btn-sm">Code →</a>
+      <div class="column is-6">
+        <div class="card card-research">
+          <div class="card-badge badge-review">Under Review</div>
+          <h3>The Role of Responsibility in AI's Strategic Risk-Taking</h3>
+          <p>15,000+ observations showing LLMs are 73.2% more likely than humans to take risks when decisions affect others.</p>
+          <div class="card-foot"><span class="card-year">2026</span><a href="https://github.com/Tsangares/llm_responsibility" class="btn btn-sm">Code &rarr;</a></div>
         </div>
       </div>
-
-      <div class="card card-research">
-        <div class="card-badge badge-wip">Working Paper</div>
-        <h3>Behavioral Effects of Personas and Demographics</h3>
-        <p>When LLMs play behavioral games, their behavior changes based on the persona they embody. Mapping demographic dimensions that shift AI strategic choices.</p>
-        <div class="card-footer">
-          <span class="card-year">2026</span>
+      <div class="column is-6">
+        <div class="card card-research">
+          <div class="card-badge badge-wip">Working Paper</div>
+          <h3>Behavioral Effects of Personas and Demographics</h3>
+          <p>When LLMs play behavioral games, their output changes based on the persona they take on. Mapping which demographic dimensions shift AI strategic choices.</p>
+          <div class="card-foot"><span class="card-year">2026</span></div>
         </div>
       </div>
-
-      <div class="card card-research">
-        <div class="card-badge badge-wip">Working Paper</div>
-        <h3>Measurable Effects from Emergency Zero Bail in California</h3>
-        <p>Quasi-experimental analysis of zero bail policy reform using RDD and DiD to measure real-world outcomes of criminal justice interventions.</p>
-        <div class="card-footer">
-          <span class="card-year">2026</span>
+      <div class="column is-6">
+        <div class="card card-research">
+          <div class="card-badge badge-wip">Working Paper</div>
+          <h3>Measurable Effects from Emergency Zero Bail in California</h3>
+          <p>Quasi-experimental analysis of zero bail policy reform using RDD and DiD to measure real-world outcomes of criminal justice interventions.</p>
+          <div class="card-foot"><span class="card-year">2026</span></div>
         </div>
       </div>
     </div>
@@ -113,146 +139,224 @@
   <div class="container">
     <div class="section-header">
       <span class="section-tag">START</span>
-      <h2>Projects</h2>
+      <h2 class="section-heading">Projects</h2>
       <p class="section-sub">Tools and systems I've built</p>
     </div>
-    <div class="card-grid card-grid-3">
-      <div class="card card-project">
-        <div class="card-top-stripe stripe-blue"></div>
-        <h3>TrueNorth</h3>
-        <p class="card-meta">Accepted, 2025</p>
-        <p>Conversational agentic RAG using PERMA+4 framework to optimize long-term STEM engagement. LLM orchestration + Discord.</p>
-        <div class="tag-row">
-          <span class="chip">Python</span><span class="chip">LLM</span><span class="chip">RAG</span>
-        </div>
-        <a href="https://github.com/Tsangares/TrueNorth-AIxHEART-2025-Discord" class="btn btn-sm mt">View →</a>
-      </div>
-
-      <div class="card card-project">
-        <div class="card-top-stripe stripe-green"></div>
-        <h3>ApexLabel</h3>
-        <p class="card-meta">Annotation Tool</p>
-        <p>Annotation software for YOLO training using SAM. Bootstraps object detection with CLIP transformer embeddings.</p>
-        <div class="tag-row">
-          <span class="chip">Python</span><span class="chip">YOLO</span><span class="chip">SAM</span>
-        </div>
-        <a href="https://github.com/Tsangares/ApexLabel" class="btn btn-sm mt">View →</a>
-      </div>
-
-      <div class="card card-project">
-        <div class="card-top-stripe stripe-purple"></div>
-        <h3>Market Simulation</h3>
-        <p class="card-meta">Economics</p>
-        <p>Agent-based simulation of free market dynamics. Models competitive equilibrium, price discovery, and emergent behavior.</p>
-        <div class="tag-row">
-          <span class="chip">Python</span><span class="chip">Econ</span>
-        </div>
-        <a href="https://github.com/Tsangares/market" class="btn btn-sm mt">View →</a>
-      </div>
-
-      <div class="card card-project">
-        <div class="card-top-stripe stripe-blue"></div>
-        <h3>Geocoder</h3>
-        <p class="card-meta">Computational Justice Lab</p>
-        <p>150M police stops at 280 req/s. Python + Rust. Saved $200k/yr in API costs for large-scale criminal justice research.</p>
-        <div class="tag-row">
-          <span class="chip">Python</span><span class="chip">Rust</span>
+    <div class="columns is-multiline">
+      <div class="column is-4">
+        <div class="card card-project">
+          <div class="card-top-stripe stripe-blue"></div>
+          <h3>TrueNorth</h3>
+          <p class="card-meta">Accepted, 2025</p>
+          <p>Conversational agentic RAG using PERMA+4 framework to optimize long-term STEM engagement. LLM orchestration + Discord.</p>
+          <div class="tag-row"><span class="chip">Python</span><span class="chip">LLM</span><span class="chip">RAG</span></div>
+          <a href="https://github.com/Tsangares/TrueNorth-AIxHEART-2025-Discord" class="btn btn-sm mt">View &rarr;</a>
         </div>
       </div>
-
-      <div class="card card-project">
-        <div class="card-top-stripe stripe-green"></div>
-        <h3>MTurk Server</h3>
-        <p class="card-meta">Research Infra</p>
-        <p>Web interface for managing behavioral experiments. Annotation, survey, and data collection pipeline for MTurk and student subjects.</p>
-        <div class="tag-row">
-          <span class="chip">Python</span><span class="chip">Flask</span>
+      <div class="column is-4">
+        <div class="card card-project">
+          <div class="card-top-stripe stripe-red"></div>
+          <h3>ApexLabel</h3>
+          <p class="card-meta">Annotation Tool</p>
+          <p>Annotation software for YOLO training using SAM. Bootstraps object detection with CLIP transformer embeddings.</p>
+          <div class="tag-row"><span class="chip">Python</span><span class="chip">YOLO</span><span class="chip">SAM</span></div>
+          <a href="https://github.com/Tsangares/ApexLabel" class="btn btn-sm mt">View &rarr;</a>
         </div>
-        <a href="https://github.com/Tsangares/mturk_server" class="btn btn-sm mt">View →</a>
       </div>
-
-      <div class="card card-project">
-        <div class="card-top-stripe stripe-purple"></div>
-        <h3>Fireside</h3>
-        <p class="card-meta">LLM Game</p>
-        <p>Conversational game built on LLMs. Interactive dialogue system exploring narrative generation and player-AI interaction.</p>
-        <div class="tag-row">
-          <span class="chip">Python</span><span class="chip">LLM</span>
+      <div class="column is-4">
+        <div class="card card-project">
+          <div class="card-top-stripe stripe-green"></div>
+          <h3>Market Simulation</h3>
+          <p class="card-meta">Economics</p>
+          <p>Agent-based simulation of free market dynamics. Models competitive equilibrium, price discovery, and emergent behavior.</p>
+          <div class="tag-row"><span class="chip">Python</span><span class="chip">Econ</span></div>
+          <a href="https://github.com/Tsangares/market" class="btn btn-sm mt">View &rarr;</a>
         </div>
-        <a href="https://github.com/Tsangares/fireside" class="btn btn-sm mt">View →</a>
+      </div>
+      <div class="column is-4">
+        <div class="card card-project">
+          <div class="card-top-stripe stripe-blue"></div>
+          <h3>Geocoder</h3>
+          <p class="card-meta">Computational Justice Lab</p>
+          <p>150M police stops at 280 req/s. Python + Rust. Saved $200k/yr in API costs for criminal justice research.</p>
+          <div class="tag-row"><span class="chip">Python</span><span class="chip">Rust</span></div>
+        </div>
+      </div>
+      <div class="column is-4">
+        <div class="card card-project">
+          <div class="card-top-stripe stripe-red"></div>
+          <h3>MTurk Server</h3>
+          <p class="card-meta">Research Infra</p>
+          <p>Web interface for managing behavioral experiments. Annotation, survey, and data collection pipeline for MTurk and students.</p>
+          <div class="tag-row"><span class="chip">Python</span><span class="chip">Flask</span></div>
+          <a href="https://github.com/Tsangares/mturk_server" class="btn btn-sm mt">View &rarr;</a>
+        </div>
+      </div>
+      <div class="column is-4">
+        <div class="card card-project">
+          <div class="card-top-stripe stripe-green"></div>
+          <h3>Fireside</h3>
+          <p class="card-meta">LLM Game</p>
+          <p>Conversational game built on LLMs. Interactive dialogue exploring narrative generation and player-AI interaction.</p>
+          <div class="tag-row"><span class="chip">Python</span><span class="chip">LLM</span></div>
+          <a href="https://github.com/Tsangares/fireside" class="btn btn-sm mt">View &rarr;</a>
+        </div>
       </div>
     </div>
-
-    <!-- Fun/older projects -->
     <details class="retro-details">
-      <summary>
-        <span class="details-icon">▸</span> Older &amp; fun builds
-      </summary>
-      <div class="card-grid card-grid-3 mt">
-        <div class="card card-project card-mini">
-          <h3>IOTA Workshop</h3>
-          <p>Autonomous equipment rental on distributed ledgers. Raspberry Pi + IOTA. Won IOT2Tangle Hackathon.</p>
-          <a href="https://github.com/Tsangares/iotaworkshop" class="btn btn-sm mt">View →</a>
+      <summary><span class="details-icon">&#9654;</span> Older builds</summary>
+      <div class="columns is-multiline mt">
+        <div class="column is-4">
+          <div class="card card-project card-mini">
+            <h3>IOTA Workshop</h3>
+            <p>Autonomous equipment rental on distributed ledgers. Raspberry Pi + IOTA. Won IOT2Tangle Hackathon.</p>
+            <a href="https://github.com/Tsangares/iotaworkshop" class="btn btn-sm mt">View &rarr;</a>
+          </div>
         </div>
-        <div class="card card-project card-mini">
-          <h3>Bot Orchestration</h3>
-          <p>Multi-agent bot swarm with C&C server. Recorded human mouse movements for realism. Docker isolation, custom scripting DSL. 5 years.</p>
+        <div class="column is-4">
+          <div class="card card-project card-mini">
+            <h3>Bot Orchestration</h3>
+            <p>Multi-agent bot swarm with C&C server. Recorded human mouse movements for realism. Docker isolation, custom scripting DSL.</p>
+          </div>
         </div>
-        <div class="card card-project card-mini">
-          <h3>Webcrawling CTF</h3>
-          <p>Multiplayer educational capture-the-flag teaching web crawling. Matter.js WebGL, Flask backend.</p>
-          <a href="https://github.com/Tsangares/crawl_ctf" class="btn btn-sm mt">View →</a>
+        <div class="column is-4">
+          <div class="card card-project card-mini">
+            <h3>Webcrawling CTF</h3>
+            <p>Multiplayer educational capture-the-flag teaching web crawling. Matter.js WebGL, Flask backend.</p>
+            <a href="https://github.com/Tsangares/crawl_ctf" class="btn btn-sm mt">View &rarr;</a>
+          </div>
         </div>
       </div>
     </details>
   </div>
 </section>
 
-<!-- Skills -->
-<section id="skills" class="section">
+<!-- Stats / Character Sheet -->
+<section id="stats" class="section">
   <div class="container">
     <div class="section-header">
       <span class="section-tag">STATS</span>
-      <h2>Skills</h2>
+      <h2 class="section-heading">Character Sheet</h2>
     </div>
-    <div class="skills-grid">
-      <div class="skill-block">
-        <h3>Econometrics</h3>
-        <div class="skill-bar-group">
-          <div class="skill-row"><span>Causal Inference (RDD, DiD, SC)</span><div class="bar"><div class="bar-fill" style="width:95%"></div></div></div>
-          <div class="skill-row"><span>Quasi-Experimental Design</span><div class="bar"><div class="bar-fill" style="width:90%"></div></div></div>
-          <div class="skill-row"><span>Non-Parametric Stats</span><div class="bar"><div class="bar-fill" style="width:85%"></div></div></div>
+
+    <!-- Research Interests Hex Grid -->
+    <h3 class="stat-category">Research Interests</h3>
+    <div class="columns is-multiline is-mobile">
+      <div class="column is-2-desktop is-4-mobile has-text-centered">
+        <div class="radar-hex">
+          <svg viewBox="0 0 100 100" class="hex-meter"><polygon points="50,5 95,27.5 95,72.5 50,95 5,72.5 5,27.5" class="hex-bg"/><polygon points="50,5 95,27.5 95,72.5 50,95 5,72.5 5,27.5" class="hex-fill" style="--level:0.92"/></svg>
+        </div>
+        <span class="radar-label">LLM Behavior</span>
+        <span class="radar-sub">4 papers</span>
+      </div>
+      <div class="column is-2-desktop is-4-mobile has-text-centered">
+        <div class="radar-hex">
+          <svg viewBox="0 0 100 100" class="hex-meter"><polygon points="50,5 95,27.5 95,72.5 50,95 5,72.5 5,27.5" class="hex-bg"/><polygon points="50,5 95,27.5 95,72.5 50,95 5,72.5 5,27.5" class="hex-fill" style="--level:0.88"/></svg>
+        </div>
+        <span class="radar-label">Causal Inference</span>
+        <span class="radar-sub">RDD, DiD, SC</span>
+      </div>
+      <div class="column is-2-desktop is-4-mobile has-text-centered">
+        <div class="radar-hex">
+          <svg viewBox="0 0 100 100" class="hex-meter"><polygon points="50,5 95,27.5 95,72.5 50,95 5,72.5 5,27.5" class="hex-bg"/><polygon points="50,5 95,27.5 95,72.5 50,95 5,72.5 5,27.5" class="hex-fill" style="--level:0.80"/></svg>
+        </div>
+        <span class="radar-label">Game Theory</span>
+        <span class="radar-sub">Behavioral econ</span>
+      </div>
+      <div class="column is-2-desktop is-4-mobile has-text-centered">
+        <div class="radar-hex">
+          <svg viewBox="0 0 100 100" class="hex-meter"><polygon points="50,5 95,27.5 95,72.5 50,95 5,72.5 5,27.5" class="hex-bg"/><polygon points="50,5 95,27.5 95,72.5 50,95 5,72.5 5,27.5" class="hex-fill" style="--level:0.85"/></svg>
+        </div>
+        <span class="radar-label">AI Alignment</span>
+        <span class="radar-sub">Safety & risk</span>
+      </div>
+      <div class="column is-2-desktop is-4-mobile has-text-centered">
+        <div class="radar-hex">
+          <svg viewBox="0 0 100 100" class="hex-meter"><polygon points="50,5 95,27.5 95,72.5 50,95 5,72.5 5,27.5" class="hex-bg"/><polygon points="50,5 95,27.5 95,72.5 50,95 5,72.5 5,27.5" class="hex-fill" style="--level:0.72"/></svg>
+        </div>
+        <span class="radar-label">Criminal Justice</span>
+        <span class="radar-sub">Policy eval</span>
+      </div>
+      <div class="column is-2-desktop is-4-mobile has-text-centered">
+        <div class="radar-hex">
+          <svg viewBox="0 0 100 100" class="hex-meter"><polygon points="50,5 95,27.5 95,72.5 50,95 5,72.5 5,27.5" class="hex-bg"/><polygon points="50,5 95,27.5 95,72.5 50,95 5,72.5 5,27.5" class="hex-fill" style="--level:0.65"/></svg>
+        </div>
+        <span class="radar-label">Particle Physics</span>
+        <span class="radar-sub">6 papers, SLAC</span>
+      </div>
+    </div>
+
+    <!-- Skill Stat Cards -->
+    <h3 class="stat-category mt-5">Skills</h3>
+    <div class="columns is-multiline">
+      <div class="column is-one-fifth-desktop is-half-mobile">
+        <div class="stat-card">
+          <div class="stat-card-header"><span class="stat-icon">&#x1F40D;</span><span class="stat-name">Python</span><span class="stat-level">Lv.14</span></div>
+          <div class="stat-pips"><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled max"></span></div>
+          <span class="stat-xp">14yr / Master</span>
         </div>
       </div>
-
-      <div class="skill-block">
-        <h3>Languages</h3>
-        <div class="skill-bar-group">
-          <div class="skill-row"><span>Python <em>14yr</em></span><div class="bar"><div class="bar-fill bar-fill-max" style="width:98%"></div></div></div>
-          <div class="skill-row"><span>C++ <em>14yr</em></span><div class="bar"><div class="bar-fill" style="width:85%"></div></div></div>
-          <div class="skill-row"><span>Rust <em>4yr</em></span><div class="bar"><div class="bar-fill" style="width:70%"></div></div></div>
-          <div class="skill-row"><span>SQL <em>8yr</em></span><div class="bar"><div class="bar-fill" style="width:80%"></div></div></div>
-          <div class="skill-row"><span>STATA <em>5yr</em></span><div class="bar"><div class="bar-fill" style="width:75%"></div></div></div>
-          <div class="skill-row"><span>R <em>3yr</em></span><div class="bar"><div class="bar-fill" style="width:55%"></div></div></div>
+      <div class="column is-one-fifth-desktop is-half-mobile">
+        <div class="stat-card">
+          <div class="stat-card-header"><span class="stat-icon">&#9881;</span><span class="stat-name">C++</span><span class="stat-level">Lv.14</span></div>
+          <div class="stat-pips"><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip"></span><span class="pip"></span></div>
+          <span class="stat-xp">14yr / Expert</span>
         </div>
       </div>
-
-      <div class="skill-block">
-        <h3>ML / AI</h3>
-        <div class="skill-bar-group">
-          <div class="skill-row"><span>LLM Research & Prompting</span><div class="bar"><div class="bar-fill bar-fill-max" style="width:95%"></div></div></div>
-          <div class="skill-row"><span>PyTorch / TensorFlow</span><div class="bar"><div class="bar-fill" style="width:80%"></div></div></div>
-          <div class="skill-row"><span>YOLO / Computer Vision</span><div class="bar"><div class="bar-fill" style="width:75%"></div></div></div>
-          <div class="skill-row"><span>NLP / Transformers</span><div class="bar"><div class="bar-fill" style="width:80%"></div></div></div>
+      <div class="column is-one-fifth-desktop is-half-mobile">
+        <div class="stat-card">
+          <div class="stat-card-header"><span class="stat-icon">&#x1F980;</span><span class="stat-name">Rust</span><span class="stat-level">Lv.4</span></div>
+          <div class="stat-pips"><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span></div>
+          <span class="stat-xp">4yr / Proficient</span>
         </div>
       </div>
-
-      <div class="skill-block">
-        <h3>Infrastructure</h3>
-        <div class="skill-bar-group">
-          <div class="skill-row"><span>Linux <em>15yr</em></span><div class="bar"><div class="bar-fill bar-fill-max" style="width:95%"></div></div></div>
-          <div class="skill-row"><span>Docker / Distributed</span><div class="bar"><div class="bar-fill" style="width:85%"></div></div></div>
-          <div class="skill-row"><span>Git / CI-CD</span><div class="bar"><div class="bar-fill" style="width:90%"></div></div></div>
+      <div class="column is-one-fifth-desktop is-half-mobile">
+        <div class="stat-card">
+          <div class="stat-card-header"><span class="stat-icon">&#x1F5C4;</span><span class="stat-name">SQL</span><span class="stat-level">Lv.8</span></div>
+          <div class="stat-pips"><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip"></span><span class="pip"></span></div>
+          <span class="stat-xp">8yr / Expert</span>
+        </div>
+      </div>
+      <div class="column is-one-fifth-desktop is-half-mobile">
+        <div class="stat-card">
+          <div class="stat-card-header"><span class="stat-icon">&#x1F4CA;</span><span class="stat-name">STATA</span><span class="stat-level">Lv.5</span></div>
+          <div class="stat-pips"><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span></div>
+          <span class="stat-xp">5yr / Proficient</span>
+        </div>
+      </div>
+      <div class="column is-one-fifth-desktop is-half-mobile">
+        <div class="stat-card">
+          <div class="stat-card-header"><span class="stat-icon">&#x1F4C8;</span><span class="stat-name">R</span><span class="stat-level">Lv.3</span></div>
+          <div class="stat-pips"><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span></div>
+          <span class="stat-xp">3yr / Journeyman</span>
+        </div>
+      </div>
+      <div class="column is-one-fifth-desktop is-half-mobile">
+        <div class="stat-card">
+          <div class="stat-card-header"><span class="stat-icon">&#x1F525;</span><span class="stat-name">PyTorch</span><span class="stat-level">Lv.4</span></div>
+          <div class="stat-pips"><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip"></span><span class="pip"></span></div>
+          <span class="stat-xp">4yr / Expert</span>
+        </div>
+      </div>
+      <div class="column is-one-fifth-desktop is-half-mobile">
+        <div class="stat-card">
+          <div class="stat-card-header"><span class="stat-icon">&#x1F427;</span><span class="stat-name">Linux</span><span class="stat-level">Lv.15</span></div>
+          <div class="stat-pips"><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled max"></span></div>
+          <span class="stat-xp">15yr / Master</span>
+        </div>
+      </div>
+      <div class="column is-one-fifth-desktop is-half-mobile">
+        <div class="stat-card">
+          <div class="stat-card-header"><span class="stat-icon">&#x1F9E0;</span><span class="stat-name">LLMs</span><span class="stat-level">Lv.4</span></div>
+          <div class="stat-pips"><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled max"></span></div>
+          <span class="stat-xp">4yr / Master</span>
+        </div>
+      </div>
+      <div class="column is-one-fifth-desktop is-half-mobile">
+        <div class="stat-card">
+          <div class="stat-card-header"><span class="stat-icon">&#x1F52C;</span><span class="stat-name">Causal Inf.</span><span class="stat-level">Lv.6</span></div>
+          <div class="stat-pips"><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled"></span><span class="pip filled max"></span></div>
+          <span class="stat-xp">6yr / Master</span>
         </div>
       </div>
     </div>
@@ -264,65 +368,33 @@
   <div class="container">
     <div class="section-header">
       <span class="section-tag">LOG</span>
-      <h2>Publications</h2>
+      <h2 class="section-heading">Publications</h2>
     </div>
-
     <h3 class="pub-category">Economics & AI</h3>
     <div class="pub-list">
-      <div class="pub-entry">
-        <span class="pub-title">The Role of Responsibility in AI's Strategic Risk-Taking</span>
-        <span class="pub-venue">Under Review, 2026</span>
-      </div>
-      <div class="pub-entry">
-        <span class="pub-title">Participation or Observation: How Prompts Control LLM Reasoning</span>
-        <span class="pub-venue">Job Market Paper, 2026</span>
-      </div>
-      <div class="pub-entry">
-        <span class="pub-title">TrueNorth: Conversational Agentic RAG to Optimize STEM Engagement</span>
-        <span class="pub-venue">Accepted, 2025</span>
-      </div>
-      <div class="pub-entry">
-        <span class="pub-title">Private Security Confounds Estimates of Public Police and Crime</span>
-        <span class="pub-venue">Springer, 2023</span>
-      </div>
+      <div class="pub-entry"><span class="pub-title">The Role of Responsibility in AI's Strategic Risk-Taking</span><span class="pub-venue">Under Review, 2026</span></div>
+      <div class="pub-entry"><span class="pub-title">Participation or Observation: How Prompts Control LLM Reasoning</span><span class="pub-venue">Job Market Paper, 2026</span></div>
+      <div class="pub-entry"><span class="pub-title">TrueNorth: Conversational Agentic RAG to Optimize STEM Engagement</span><span class="pub-venue">Accepted, 2025</span></div>
+      <div class="pub-entry"><span class="pub-title">Private Security Confounds Estimates of Public Police and Crime</span><span class="pub-venue">Springer, 2023</span></div>
     </div>
-
     <h3 class="pub-category">Physics (UCSC / SLAC)</h3>
     <div class="pub-list">
-      <div class="pub-entry">
-        <a href="https://arxiv.org/abs/2006.04241" class="pub-title">Potential for Improved Time Resolution Using Very Thin Ultra-Fast Silicon Detectors</a>
-        <span class="pub-venue">arXiv, 2020</span>
-      </div>
-      <div class="pub-entry">
-        <a href="https://doi.org/10.1016/j.nima.2020.164608" class="pub-title">Radiation hardness of low gain avalanche diodes (NDL/IHEP)</a>
-        <span class="pub-venue">NIM-A vol. 984, 2020</span>
-      </div>
-      <div class="pub-entry">
-        <a href="https://cds.cern.ch/record/2718058" class="pub-title">Experimental Study of Acceptor Removal in UFSD</a>
-        <span class="pub-venue">NIM-A vol. 983, 2020</span>
-      </div>
-      <div class="pub-entry">
-        <a href="https://arxiv.org/abs/2003.14071" class="pub-title">Layout and Performance of HPK Prototype LGAD Sensors for HGTD</a>
-        <span class="pub-venue">NIM-A vol. 980, 2020</span>
-      </div>
-      <div class="pub-entry">
-        <a href="https://arxiv.org/abs/2004.13895" class="pub-title">Radiation Campaign of HPK Prototype LGAD sensors for HGTD</a>
-        <span class="pub-venue">NIM-A vol. 979, 2020</span>
-      </div>
-      <div class="pub-entry">
-        <a href="https://doi.org/10.1016/j.nima.2019.01.050" class="pub-title">Use of LGAD ultra-fast silicon detectors for time-resolved low-keV X-ray science</a>
-        <span class="pub-venue">NIM-A vol. 923, 2019</span>
-      </div>
+      <div class="pub-entry"><a href="https://arxiv.org/abs/2006.04241" class="pub-title">Potential for Improved Time Resolution Using Very Thin Ultra-Fast Silicon Detectors</a><span class="pub-venue">arXiv, 2020</span></div>
+      <div class="pub-entry"><a href="https://doi.org/10.1016/j.nima.2020.164608" class="pub-title">Radiation hardness of low gain avalanche diodes (NDL/IHEP)</a><span class="pub-venue">NIM-A 984, 2020</span></div>
+      <div class="pub-entry"><a href="https://cds.cern.ch/record/2718058" class="pub-title">Experimental Study of Acceptor Removal in UFSD</a><span class="pub-venue">NIM-A 983, 2020</span></div>
+      <div class="pub-entry"><a href="https://arxiv.org/abs/2003.14071" class="pub-title">Layout and Performance of HPK Prototype LGAD Sensors for HGTD</a><span class="pub-venue">NIM-A 980, 2020</span></div>
+      <div class="pub-entry"><a href="https://arxiv.org/abs/2004.13895" class="pub-title">Radiation Campaign of HPK Prototype LGAD sensors for HGTD</a><span class="pub-venue">NIM-A 979, 2020</span></div>
+      <div class="pub-entry"><a href="https://doi.org/10.1016/j.nima.2019.01.050" class="pub-title">Use of LGAD ultra-fast silicon detectors for time-resolved low-keV X-ray science</a><span class="pub-venue">NIM-A 923, 2019</span></div>
     </div>
   </div>
 </section>
 
 <!-- Contact -->
 <section id="contact" class="section">
-  <div class="container center-text">
-    <h2>Let's talk</h2>
+  <div class="container has-text-centered">
+    <h2 class="section-heading">Get in touch</h2>
     <p class="contact-email">William.Wyatt@cgu.edu</p>
-    <div class="hero-buttons">
+    <div class="btn-group" style="justify-content:center">
       <a href="mailto:William.Wyatt@cgu.edu" class="btn btn-primary">Email</a>
       <a href="https://github.com/Tsangares" class="btn btn-outline">GitHub</a>
       <a href="https://linkedin.com/in/wyatt-william" class="btn btn-outline">LinkedIn</a>
@@ -333,67 +405,67 @@
 <!-- Massive footer -->
 <footer class="footer-massive">
   <div class="container">
-    <div class="footer-grid">
-      <div class="footer-col">
-        <h4>William Wyatt</h4>
-        <p>PhD Economist · AI Researcher<br>Claremont Graduate University</p>
-        <p class="footer-dim">Studying LLM behavioral alignment through game theory and causal inference.</p>
+    <div class="footer-title">WILLIAM WYATT</div>
+    <div class="columns">
+      <div class="column is-5">
+        <h4 class="footer-heading">About</h4>
+        <p class="footer-text">PhD Economist and AI researcher at Claremont Graduate University. I study how large language models behave in economic decision-making contexts using game theory and causal inference.</p>
+        <p class="footer-stat">10 publications across physics and economics. 15,000+ experimental observations. 150 million records processed. 136 open source repositories.</p>
       </div>
-      <div class="footer-col">
-        <h4>Research</h4>
-        <ul>
+      <div class="column is-2">
+        <h4 class="footer-heading">Research</h4>
+        <ul class="footer-list">
           <li><a href="#research">LLM Embodiment</a></li>
           <li><a href="#research">AI Risk-Taking</a></li>
-          <li><a href="#research">Persona Effects</a></li>
-          <li><a href="#research">Zero Bail</a></li>
+          <li><a href="#research">Game Theory</a></li>
+          <li><a href="#research">Criminal Justice</a></li>
+          <li><a href="#research">Silicon Detectors</a></li>
         </ul>
       </div>
-      <div class="footer-col">
-        <h4>Links</h4>
-        <ul>
+      <div class="column is-2">
+        <h4 class="footer-heading">Links</h4>
+        <ul class="footer-list">
           <li><a href="https://github.com/Tsangares">GitHub</a></li>
           <li><a href="https://linkedin.com/in/wyatt-william">LinkedIn</a></li>
-          <li><a href="https://scholar.google.com">Google Scholar</a></li>
           <li><a href="mailto:William.Wyatt@cgu.edu">Email</a></li>
         </ul>
       </div>
-      <div class="footer-col">
-        <h4>Education</h4>
-        <ul>
-          <li>Ph.D. Economics — CGU (2026)</li>
-          <li>M.S. Mathematics — CGU (2025)</li>
-          <li>B.S. Physics — UCSC (2016)</li>
+      <div class="column is-3">
+        <h4 class="footer-heading">Education</h4>
+        <ul class="footer-list">
+          <li>Ph.D. Economics, CGU (2026)</li>
+          <li>M.S. Mathematics, CGU (2025)</li>
+          <li>B.S. Physics, UCSC (2016)</li>
+        </ul>
+        <h4 class="footer-heading mt-4">Awards</h4>
+        <ul class="footer-list">
+          <li>CGU Datathon Winner (2024)</li>
+          <li>IOT2Tangle Hackathon Winner</li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 William Wyatt</span>
-      <span class="footer-dim">Built with plain HTML + CSS. No frameworks were harmed.</span>
+      <span>&copy; 2026 William Wyatt</span>
+      <span class="footer-dim">Plain HTML + CSS + Bulma. No frameworks harmed.</span>
     </div>
   </div>
 </footer>
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
-  // Mobile nav toggle
-  const toggle = document.querySelector('.nav-toggle');
-  const links = document.querySelector('.nav-links');
-  toggle.addEventListener('click', () => {
-    toggle.classList.toggle('active');
-    links.classList.toggle('open');
-  });
-  // Close on link click
-  links.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-      toggle.classList.remove('active');
-      links.classList.remove('open');
+  // Bulma burger toggle
+  document.querySelectorAll('.navbar-burger').forEach(el => {
+    el.addEventListener('click', () => {
+      const target = document.getElementById(el.dataset.target);
+      el.classList.toggle('is-active');
+      target.classList.toggle('is-active');
     });
   });
-  // Details arrow rotation
+  // Details arrow
   document.querySelectorAll('.retro-details').forEach(d => {
     d.addEventListener('toggle', () => {
       const icon = d.querySelector('.details-icon');
-      icon.textContent = d.open ? '▾' : '▸';
+      icon.textContent = d.open ? '\u25BE' : '\u25B6';
     });
   });
 });
