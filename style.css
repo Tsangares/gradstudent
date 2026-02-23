@@ -136,6 +136,10 @@ body {
   filter: saturate(0.85);
 }
 
+.portrait-secondary {
+  border-radius: var(--radius-lg);
+}
+
 .hero-tag {
   font-family: 'Space Mono', monospace;
   font-size: 0.8rem;
