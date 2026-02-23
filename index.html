@@ -138,10 +138,9 @@
 <section id="projects" class="section section-alt">
   <div class="container">
     <div class="section-header">
-      <div class="controller-btns">
-        <button class="snes-btn snes-select" data-scroll="research">SELECT</button>
-        <span class="btn-gap"></span>
-        <button class="snes-btn snes-start" data-scroll="stats">START</button>
+      <div class="terminal-prompt" id="termPrompt">
+        <span class="term-user">wil</span><span class="term-at">@</span><span class="term-host">arch</span><span class="term-colon">:</span><span class="term-path">~/projects</span><span class="term-dollar">$</span>
+        <span class="term-cmd" id="termCmd">ls -la</span><span class="term-cursor"></span>
       </div>
       <h2 class="section-heading">Projects</h2>
       <p class="section-sub">Tools and systems I've built</p>
@@ -239,10 +238,14 @@
 <section id="stats" class="section">
   <div class="container">
     <div class="section-header">
-      <div class="controller-btns">
-        <button class="snes-btn snes-select" data-scroll="projects">SELECT</button>
-        <span class="btn-gap"></span>
-        <button class="snes-btn snes-start" data-scroll="publications">START</button>
+      <div class="oscilloscope">
+        <div class="scope-screen">
+          <svg viewBox="0 0 200 60" class="scope-wave" preserveAspectRatio="none">
+            <path class="scope-trace" id="scopeTrace" fill="none" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <div class="scope-grid"></div>
+        </div>
+        <div class="scope-label">CH1 <span class="scope-freq">60Hz</span></div>
       </div>
       <h2 class="section-heading">Character Sheet</h2>
     </div>
@@ -361,10 +364,14 @@
 <section id="publications" class="section section-alt">
   <div class="container">
     <div class="section-header">
-      <div class="controller-btns">
-        <button class="snes-btn snes-select" data-scroll="stats">SELECT</button>
-        <span class="btn-gap"></span>
-        <button class="snes-btn snes-start" data-scroll="contact">START</button>
+      <div class="catalog-card">
+        <div class="catalog-holes"><span></span><span></span><span></span></div>
+        <div class="catalog-body">
+          <div class="catalog-stamp">CATALOG</div>
+          <div class="catalog-num">NO. 10</div>
+          <div class="catalog-line">WYATT, W. &mdash; COLLECTED WORKS</div>
+        </div>
+        <div class="catalog-date">2019&ndash;2026</div>
       </div>
       <h2 class="section-heading">Publications</h2>
     </div>
@@ -560,6 +567,41 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // Terminal prompt - cycle commands on click
+  (function() {
+    const cmds = ['ls -la', 'make all', 'git log --oneline', 'python main.py', 'cargo build --release', 'cat README.md'];
+    let idx = 0;
+    const el = document.getElementById('termCmd');
+    const prompt = document.getElementById('termPrompt');
+    if (prompt && el) {
+      prompt.style.cursor = 'pointer';
+      prompt.addEventListener('click', () => {
+        idx = (idx + 1) % cmds.length;
+        el.textContent = cmds[idx];
+      });
+    }
+  })();
+
+  // Oscilloscope - animated sine wave
+  (function() {
+    const path = document.getElementById('scopeTrace');
+    if (!path) return;
+    let phase = 0;
+    function draw() {
+      const w = 200, h = 60, mid = h / 2;
+      let d = 'M0,' + mid;
+      for (let x = 0; x <= w; x += 2) {
+        const y = mid + Math.sin((x / w) * Math.PI * 4 + phase) * (mid - 6)
+                      * (0.7 + 0.3 * Math.sin((x / w) * Math.PI * 1.5 + phase * 0.3));
+        d += ' L' + x + ',' + y.toFixed(1);
+      }
+      path.setAttribute('d', d);
+      phase += 0.04;
+      requestAnimationFrame(draw);
+    }
+    draw();
+  })();
 });
 </script>
 </body>

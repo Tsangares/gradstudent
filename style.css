@@ -320,6 +320,170 @@ body {
   margin-left: 0.6rem;
 }
 
+/* ---- Terminal prompt (Projects) ---- */
+.terminal-prompt {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.78rem;
+  background: #1e1e1e;
+  color: #c8c8c8;
+  padding: 0.55rem 1rem;
+  border-radius: var(--radius);
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 0.8rem;
+  border: 1px solid #333;
+  box-shadow: inset 0 1px 4px rgba(0,0,0,0.4), 0 2px 0 var(--border);
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+.terminal-prompt:hover { border-color: #555; }
+
+.term-user { color: #6bbd6b; }
+.term-at { color: #888; }
+.term-host { color: #6bbd6b; }
+.term-colon { color: #888; }
+.term-path { color: #5b9fd4; }
+.term-dollar { color: #888; margin: 0 0.4rem; }
+.term-cmd { color: #e8e8e8; }
+
+.term-cursor {
+  display: inline-block;
+  width: 7px;
+  height: 1em;
+  background: #c8c8c8;
+  margin-left: 2px;
+  animation: blink 1s step-end infinite;
+  vertical-align: text-bottom;
+}
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* ---- Oscilloscope (Stats) ---- */
+.oscilloscope {
+  display: inline-block;
+  margin-bottom: 0.8rem;
+}
+
+.scope-screen {
+  width: 220px;
+  height: 64px;
+  background: #0a1a0a;
+  border: 2px solid #444;
+  border-radius: var(--radius);
+  position: relative;
+  overflow: hidden;
+  box-shadow:
+    inset 0 0 20px rgba(0, 255, 0, 0.04),
+    0 2px 0 var(--border);
+}
+
+.scope-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0,255,0,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,255,0,0.06) 1px, transparent 1px);
+  background-size: 22px 16px;
+}
+
+.scope-wave {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.scope-trace {
+  stroke: #00ff44;
+  filter: drop-shadow(0 0 3px rgba(0, 255, 0, 0.6));
+}
+
+.scope-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.55rem;
+  color: var(--ink-faint);
+  margin-top: 0.25rem;
+  letter-spacing: 0.1em;
+}
+.scope-freq { color: var(--green); }
+
+/* ---- Catalog card (Publications) ---- */
+.catalog-card {
+  display: inline-block;
+  background: #f5f0e0;
+  border: 2px solid #c8b888;
+  border-radius: 2px;
+  padding: 0.6rem 1.2rem 0.5rem;
+  margin-bottom: 0.8rem;
+  position: relative;
+  box-shadow: 0 2px 0 var(--border), 1px 1px 4px rgba(0,0,0,0.08);
+  /* Slight age / paper feel */
+  background-image: linear-gradient(180deg, #f5f0e0 0%, #ece6d0 100%);
+}
+
+.catalog-holes {
+  display: flex;
+  gap: 3px;
+  position: absolute;
+  left: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  flex-direction: column;
+}
+.catalog-holes span {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 1px solid #c8b888;
+}
+
+.catalog-body {
+  padding-left: 1rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+}
+
+.catalog-stamp {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--red);
+  text-transform: uppercase;
+  border: 2px solid var(--red);
+  padding: 0.1rem 0.4rem;
+  border-radius: 2px;
+  transform: rotate(-3deg);
+  display: inline-block;
+}
+
+.catalog-num {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #3a3020;
+}
+
+.catalog-line {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.55rem;
+  color: #8a8060;
+  letter-spacing: 0.08em;
+}
+
+.catalog-date {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.5rem;
+  color: #a09878;
+  text-align: right;
+  margin-top: 0.15rem;
+  padding-left: 1rem;
+}
+
 .section-heading {
   font-family: 'Space Mono', monospace;
   font-size: 2rem;
