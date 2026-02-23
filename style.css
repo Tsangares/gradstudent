@@ -827,13 +827,15 @@ body {
 }
 
 .radar-chart-wrap {
-  max-width: 420px;
+  max-width: 460px;
   margin: 0 auto 2rem;
+  overflow: visible;
 }
 
 .radar-chart {
   width: 100%;
   height: auto;
+  overflow: visible;
 }
 
 .radar-fill {
