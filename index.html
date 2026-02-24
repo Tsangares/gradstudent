@@ -66,7 +66,7 @@
   <div class="container">
     <div class="columns is-mobile is-multiline is-centered">
       <div class="column is-3-desktop is-6-mobile has-text-centered">
-        <span class="counter-num">10</span>
+        <span class="counter-num">8</span>
         <span class="counter-label">Publications</span>
       </div>
       <div class="column is-3-desktop is-6-mobile has-text-centered">
@@ -74,7 +74,7 @@
         <span class="counter-label">Reads</span>
       </div>
       <div class="column is-3-desktop is-6-mobile has-text-centered">
-        <span class="counter-num">105</span>
+        <span class="counter-num">104</span>
         <span class="counter-label">Citations</span>
       </div>
     </div>
@@ -257,7 +257,7 @@
     <!-- Research Interests Radar Chart -->
     <h3 class="stat-category">Research Interests</h3>
     <div class="radar-chart-wrap">
-      <svg id="radarChart" viewBox="-80 -60 560 520" class="radar-chart">
+      <svg id="radarChart" viewBox="-110 -80 620 570" class="radar-chart">
         <defs>
           <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
             <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur"/>
@@ -268,9 +268,9 @@
             </feMerge>
           </filter>
           <radialGradient id="radarGrad" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stop-color="#a04048" stop-opacity="0.7"/>
-            <stop offset="50%" stop-color="#7040a0" stop-opacity="0.5"/>
-            <stop offset="100%" stop-color="#4a6fa5" stop-opacity="0.25"/>
+            <stop offset="0%" stop-color="#a04048" stop-opacity="0.85"/>
+            <stop offset="50%" stop-color="#7040a0" stop-opacity="0.65"/>
+            <stop offset="100%" stop-color="#4a6fa5" stop-opacity="0.4"/>
           </radialGradient>
         </defs>
         <!-- Grid rings (20%, 40%, 60%, 80%, 100%) -->
@@ -525,7 +525,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Labels
     const labelsG = document.getElementById('radarLabels');
     data.forEach((d, i) => {
-      const [x, y] = vertex(i, R + 32);
+      const [x, y] = vertex(i, R + 55);
       const text = document.createElementNS(ns, 'text');
       text.setAttribute('x', x); text.setAttribute('y', y);
       text.setAttribute('text-anchor', 'middle');
@@ -535,7 +535,7 @@ document.addEventListener('DOMContentLoaded', () => {
       labelsG.appendChild(text);
       // Sub label
       const sub = document.createElementNS(ns, 'text');
-      sub.setAttribute('x', x); sub.setAttribute('y', y + 14);
+      sub.setAttribute('x', x); sub.setAttribute('y', y + 17);
       sub.setAttribute('text-anchor', 'middle');
       sub.setAttribute('dominant-baseline', 'middle');
       sub.setAttribute('class', 'radar-chart-sub');
