@@ -790,14 +790,14 @@ body {
 
 .radar-chart-label {
   font-family: 'Space Mono', monospace;
-  font-size: 15px;
+  font-size: 22px;
   font-weight: 700;
   fill: var(--ink);
 }
 
 .radar-chart-sub {
   font-family: 'Inter', sans-serif;
-  font-size: 12px;
+  font-size: 16px;
   fill: var(--ink-faint);
 }
 
@@ -961,8 +961,8 @@ a.pub-title:hover { color: var(--blue); border-color: var(--blue); }
   }
 
   /* Radar chart labels smaller on mobile */
-  .radar-chart-label { font-size: 12px; }
-  .radar-chart-sub { font-size: 10px; }
+  .radar-chart-label { font-size: 16px; }
+  .radar-chart-sub { font-size: 13px; }
 }
 
 @media (max-width: 480px) {
