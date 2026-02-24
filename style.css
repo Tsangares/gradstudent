@@ -250,6 +250,19 @@ body {
   color: var(--nes-gray);
 }
 
+.counter-link {
+  text-decoration: none;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  cursor: pointer;
+}
+.counter-link:hover {
+  transform: scale(1.1);
+  opacity: 0.85;
+}
+.counter-link:hover .counter-num {
+  color: var(--nes-accent, #4a6fa5);
+}
+
 /* ---- Section headers ---- */
 
 /* SNES controller buttons - SELECT/START sit in a recessed trough */
