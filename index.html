@@ -257,7 +257,7 @@
     <!-- Research Interests Radar Chart -->
     <h3 class="stat-category">Research Interests</h3>
     <div class="radar-chart-wrap">
-      <svg id="radarChart" viewBox="-160 -120 720 680" class="radar-chart">
+      <svg id="radarChart" viewBox="-220 -160 840 800" class="radar-chart">
         <defs>
           <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
             <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur"/>
@@ -525,7 +525,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Labels
     const labelsG = document.getElementById('radarLabels');
     data.forEach((d, i) => {
-      const [x, y] = vertex(i, R + 80);
+      const [x, y] = vertex(i, R + 110);
       const text = document.createElementNS(ns, 'text');
       text.setAttribute('x', x); text.setAttribute('y', y);
       text.setAttribute('text-anchor', 'middle');
@@ -535,7 +535,7 @@ document.addEventListener('DOMContentLoaded', () => {
       labelsG.appendChild(text);
       // Sub label
       const sub = document.createElementNS(ns, 'text');
-      sub.setAttribute('x', x); sub.setAttribute('y', y + 22);
+      sub.setAttribute('x', x); sub.setAttribute('y', y + 30);
       sub.setAttribute('text-anchor', 'middle');
       sub.setAttribute('dominant-baseline', 'middle');
       sub.setAttribute('class', 'radar-chart-sub');
