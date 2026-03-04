@@ -560,6 +560,7 @@ body {
 .stripe-blue   { background: var(--blue); }
 .stripe-red    { background: var(--red); }
 .stripe-green  { background: var(--green); }
+.stripe-purple { background: var(--purple); }
 
 .card h3 {
   font-family: 'Space Mono', monospace;
