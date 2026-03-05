@@ -950,6 +950,7 @@ a.pub-title:hover { color: var(--blue); border-color: var(--blue); }
   .degree-trail { justify-content: center; }
 
   .section-heading { font-size: 1.5rem; }
+  .footer-massive { padding: 2.5rem 1rem 1.5rem; }
   .footer-title { font-size: 1.6rem; }
   .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
   .pub-entry { flex-direction: column; gap: 0.2rem; }
