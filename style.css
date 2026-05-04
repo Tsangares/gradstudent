@@ -522,6 +522,20 @@ body {
   margin-bottom: 2rem;
 }
 
+.research-notes-link {
+  color: var(--blue);
+  font-family: 'Space Mono', monospace;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  border-bottom: 1px dashed var(--blue);
+  padding-bottom: 1px;
+  transition: color 0.15s, border-color 0.15s;
+}
+.research-notes-link:hover {
+  color: var(--purple);
+  border-bottom-color: var(--purple);
+}
+
 .section-alt { background: var(--bg-alt); }
 
 /* ---- Cards (cartridge style) ---- */
